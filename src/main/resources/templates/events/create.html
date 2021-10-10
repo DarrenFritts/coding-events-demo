@@ -1,3 +1,4 @@
+<!--
 <!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org/">
 <head>
@@ -8,9 +9,29 @@
 
     <h1>Create Event</h1>
 
+    <nav th:replace="fragments :: navigation"></nav>
+
     <form method="Post" action="/events/create">
         <input type="text" name="eventName">
         <input type="submit" value="Create Event">
     </form>
+</body>
+</html>-->
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Coding Events</title>
+</head>
+<body>
+
+<header th:replace="fragments :: header"></header>
+
+<form method="post">
+    <input type="text" name="eventName">
+    <input type="submit" value="Create">
+</form>
+
 </body>
 </html>

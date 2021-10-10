@@ -1,3 +1,4 @@
+<!--
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
 <head>
@@ -8,10 +9,28 @@
 
 <h1>All Events</h1>
 
-// conditional (boolean) logic using th:unless, which is the opposite of th:if
-// if there isn't an events AND it's size isn't 0, display the "No events!" text
-// if there are events, display the events, not the "No events!" text
+<nav th:replace="fragments :: navigation"></nav>
+
 <p th:unless="${events} and ${events.size()}">No events!</p>
+
+<ul>
+    <th:block th:each="event : ${events}">
+        <li th:text="${event}"></li>
+    </th:block>
+</ul>
+
+</body>
+</html>-->
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Coding Events</title>
+</head>
+<body>
+
+<header th:replace="fragments :: header"></header>
 
 <ul>
     <th:block th:each="event : ${events}">
