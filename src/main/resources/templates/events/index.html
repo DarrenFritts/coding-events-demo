@@ -8,6 +8,11 @@
 
 <h1>All Events</h1>
 
+// conditional (boolean) logic using th:unless, which is the opposite of th:if
+// if there isn't an events AND it's size isn't 0, display the "No events!" text
+// if there are events, display the events, not the "No events!" text
+<p th:unless="${events} and ${events.size()}">No events!</p>
+
 <ul>
     <th:block th:each="event : ${events}">
         <li th:text="${event}"></li>
